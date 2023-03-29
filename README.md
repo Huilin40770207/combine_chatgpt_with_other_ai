@@ -1,1 +1,2 @@
-# omni_ai_website
+# Omni-AI: Combine ChatGPT with other AIs
+
