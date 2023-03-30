@@ -145,13 +145,13 @@ p {
     }
 
     .page1 {
-        height: 200%;
+        height: 300%;
     }
 
     .page2 {
         flex-direction: column;
-        height: 200%;
-        top: 200vh;
+        height: 300%;
+        top: 300vh;
         width: 100%;
     }
 
@@ -161,6 +161,19 @@ p {
     }
 
     .comparison-chatgpt-textarea {
+        width: 100%;
+    }
+}
+
+@media (max-height: 700px) {
+    .page1 {
+        height: 300%;
+    }
+
+    .page2 {
+        flex-direction: column;
+        height: 300%;
+        top: 300vh;
         width: 100%;
     }
 }
