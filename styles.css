@@ -111,3 +111,56 @@ p {
 .page2-title {
     height:10%;
 }
+
+.comparison-chatgpt-textarea {
+    font-size: 12pt;
+    width: 100%;
+    max-width: 100%;
+    height: 400px; /* Adjust the height according to your preference */
+    resize: vertical; /* Allow vertical resizing */
+
+    font-size:12pt;
+}
+
+@media (max-width: 767px) {
+    .row textarea,
+    button {
+        width: 100%;
+    }
+
+    .input-row,
+    .output-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-with-prompt {
+        flex-direction: column;
+    }
+
+    p {
+        text-align: left;
+        width: 100%;
+    }
+
+    .page1 {
+        height: 200%;
+    }
+
+    .page2 {
+        flex-direction: column;
+        height: 200%;
+        top: 200vh;
+        width: 100%;
+    }
+
+    .column {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .comparison-chatgpt-textarea {
+        width: 100%;
+    }
+}
