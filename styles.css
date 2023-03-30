@@ -165,7 +165,7 @@ p {
     }
 }
 
-@media (max-height: 700px) {
+@media (max-height: 900px) {
     .page1 {
         height: 300%;
     }
