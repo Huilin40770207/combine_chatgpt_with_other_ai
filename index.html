@@ -24,7 +24,10 @@
         <div class="page1">
             <div class="title-row">
                 <h1>Omni-AI: Combine ChatGPT with other AIs</h1>
-                <h3>(Limitation: Support picture creations (excluding modifications) only at current)</h3>
+                <h3>
+                    (Limitation: Support picture (experimental: video) creations (excluding modifications) only at current). 
+                    <a href="changelogs.html" target=”_blank”>Changelogs</a>
+                </h3>
             </div>
             <div class="input-row">
                 <label style="font-size:16pt;">Input configurations and your goals below:</label>
@@ -64,6 +67,9 @@
                     (4) Generate a story of two cartoon characters Tom and Jerry. Then summarize the story into four
                     sentences. Then generate a photo of Tom and Jerry based on the summarization. <br>
                 </h3>
+                <h3 style="color:hsla(108, 78%, 41%, 0.904);text-align: left;">
+                    (New-experimental) Generate a video of a panda walking on a street <br>
+                </h3>
             </div>
             <div class="output-row">
                 <label for="ta_output" style="font-size:16pt;">Omni_AI Output:</label>
@@ -99,6 +105,9 @@
 
 
     <script>
+        // const webserver_url = 'https://superymktest.azurewebsites.net';
+        const webserver_url = 'http://localhost:3000'; 
+
         // const formEl = document.querySelector('.form');
         const formEl = document.getElementById('user_input_form');
         formEl.addEventListener('submit', event => {
@@ -113,8 +122,7 @@
             // Process request and response to the Omni-AI web service
             const formData = new FormData(formEl);
             const data = Object.fromEntries(formData);
-            // fetch('http://localhost:3000/query', {
-            fetch('https://superymktest.azurewebsites.net/query', {
+            fetch(webserver_url + '/query', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'text/plain'
@@ -161,8 +169,7 @@
 
 
             // Output chatgpt's result to the Omni-AI web service
-            // fetch('http://localhost:3000/query_chatgpt', {
-            fetch('https://superymktest.azurewebsites.net/query_chatgpt', {
+            fetch(webserver_url + '/query_chatgpt', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'text/plain'
@@ -180,8 +187,7 @@
 
 
             // Output chatgpt's result to the Omni-AI web service
-            // fetch('http://localhost:3000/query_dalle', {
-            fetch('https://superymktest.azurewebsites.net/query_dalle', {
+            fetch(webserver_url + '/query_dalle', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'text/plain'
