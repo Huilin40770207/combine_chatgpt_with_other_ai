@@ -122,7 +122,7 @@ p {
     font-size:12pt;
 }
 
-@media (max-width: 767px) {
+@media only screen and (min-width: 100px) and (max-width: 320px) {
     .row textarea,
     button {
         width: 100%;
@@ -165,15 +165,71 @@ p {
     }
 }
 
-@media (max-height: 900px) {
+@media only screen and (min-width: 321px) and (max-width: 425px) {
+    .row textarea,
+    button {
+        width: 100%;
+    }
+
+    .input-row,
+    .output-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-with-prompt {
+        flex-direction: column;
+    }
+
+    p {
+        text-align: left;
+        width: 100%;
+    }
+
     .page1 {
-        height: 300%;
+        height: 250%;
     }
 
     .page2 {
         flex-direction: column;
-        height: 300%;
-        top: 300vh;
+        height: 250%;
+        top: 250vh;
+        width: 100%;
+    }
+
+    .column {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .comparison-chatgpt-textarea {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+    .page1 {
+        height: 200%;
+    }
+
+    .page2 {
+        flex-direction: column;
+        height: 200%;
+        top: 200vh;
+        width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 769px) and (max-height: 1000px) {
+    .page1 {
+        height: 150%;
+    }
+
+    .page2 {
+        height: 150%;
+        top: 150vh;
         width: 100%;
     }
 }
